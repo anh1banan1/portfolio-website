@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="icon" href="favicon.ico">
-  <title>Contact Anh Tu</title>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>My Portfolio Website</title>
 </head>
 <body>
 
     <header class="page-header">
-      <img src="img/Anh_logo.jpeg" alt="logo" class="page-header__item">
+      <img src="img/pat_logo.jpeg" alt="logo" class="page-header__item">
       <nav class="main-navigation page-header__item">
         <ul role="menubar" class="navigation-list">
           <li role="presentation">
@@ -30,43 +31,44 @@
       </nav>
   </header>
 
-  <div>
-    <form action="" method="post" id="contact-form">
-      <label class="standard-label" for="contact-email">Email: </label>
-      <input type="email" id="contact-email" required>
-
-      <label class="standard-label" for="contact-phone">Telephone: </label>
-      <input type="tel" id="contact-phone">
-
-      <label class="standard-label" for="contact-message">Message: </label>
-      <textarea maxlength="240" id="contact-message" required></textarea>
-      <input type="submit" value="Send message">
-    </form>
-  </div>
-
-  <div>
-    CareerFoundry GmbH<br>
-    Köpenicker Str. 126 <br>
-    10179 Berlin<br>
-    Deutschland<br>
-    <br>
-    Tel <a href="tel:+491234567">+49 1234567</a><br>
-    Skype <a href="skype:hello.careerfoundry"> hello.careerfoundry</a><br>
-    <a href="mailto:office@careerfoundry.com">office@careerfoundry.com</a>
-    <a href="mailto:office@careerfoundry.com">Contact me</a>
+  <div class="contact">
+    <div class="contact-wrapper">
+      <form class="form">
+        <h1>Let's <span class="page-highlight">Connect!</span></h1>
+        <input
+        class="name entry"
+        type="text"
+        placeholder="Name"
+        required/>
+        <input
+        class="email entry"
+        type="email"
+        placeholder="Email"
+        required/>
+        <input
+        class="phone entry"
+        type="tel"
+        placeholder="Phone number"/>
+        <textarea
+        class="message entry"
+        placeholder="Message"
+        required></textarea>
+        <button class="submit entry" onclick="thanks()">Send message
+        </button>
+      </form>
+      <div class="shadow">
+      </div>
+    </div>
   </div>
 
   <footer class="page-footer">
-    <p>Find me on</p>
-    <div class="social-media">
-      <!-- Github logo -->
-      <img src="img/github_icon.svg" alt="github" width="30px" height="30px">
-      <!-- Twitter logo -->
-      <img src="img/twitter_icon.svg" alt="twitter" width="30px" height="30px">
-      <!-- LinkedIn logo -->
-      <img src="img/linkedin_icon.svg" alt="linkedin" width="30px" height="30px">
-    </div>
+	  <p>Find me on</p>
+		<div class="social-media">
+      <img class="socials" src="img/github_icon.svg" alt="github">
+      <img class="socials" src="img/linkedin_icon.svg" alt="linkedin">
+      <img class="socials" src="img/gmail_icon.svg" alt="gmail">
+		</div>
   </footer>
-  <script src="js/tota11y.min.js"></script>
+	<script src="js/tota11y.min.js"></script>
 </body>
 </html>
