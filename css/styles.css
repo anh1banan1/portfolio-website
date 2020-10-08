@@ -1,17 +1,17 @@
+/* VARIABLES */
 :root {
-  --primary-color: #357b70;
-  --secondary-color: #e0b354;
-  --visited-color: #05676e;
-  --active-color: #489c79;
+  --primary-color: #e35d6a;
+  --secondary-color: #854442;
+  --active-color: #e04e81;
   --dark-grey: #2b2b2b;
   --body-font-weight: 400;
   --heading-font-weight: 700;
   --body-font-size: 16px;
   --h1-font-size: 30px;
   --h2-font-size: 24px;
-  --h3-font-size: 18px;
 }
 
+/* GENERAL */
 * {
   box-sizing: border-box;
 }
@@ -34,30 +34,17 @@ h2 {
   font-weight: var(--heading-font-weight);
 }
 
-h3 {
-  font-size: var(--h3-font-size);
-  font-weight: var(--heading-font-weight);
-}
-
 a {
-  color: var(--primary-color);
-}
-
-a:visited {
-  /* visited link */
-  color: var(--visited-color);
-}
-
-a:hover, a:focus {
-  /* No underlining when hovering over a link */
+  color: var(--dark-grey);
   text-decoration: none;
 }
 
 a:active {
   /* selected link */
-  color: var(--active-color);
+  color: var(--primary-color);
 }
 
+/* BUTTONS */
 .button, button {
   border: none;
   display: inline-block;
@@ -70,24 +57,24 @@ a:active {
   padding: 10px;
   border-radius: 3px;
   /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3)
-  transition: 0.2s opacity;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.9s opacity;
 }
 
 button:hover,
 button:focus,
 .button:hover,
-button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
-  cursor: pointer;
+.button:focus {
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
+  transform: scale(1.1);
 }
 
+/* HOME PAGE */
 .profile__portrait {
   float: left;
   width: 250px;
-  margin-right: 40px;
+  margin-right: 100px;
   border-radius: 50%;
 }
 
@@ -98,9 +85,36 @@ button:focus {
   text-align: center;
 }
 
+.socials {
+  width: 30px;
+  height: 30px;
+}
+
 .profile {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 200px auto;
+}
+
+.page-highlight {
+  color: var(--primary-color);
+  animation: extra 1.5s ease 0s;
+}
+
+@keyframes extra {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 3;
+  }
+}
+
+.myname {
+  color: var(--primary-color);
+  font-weight: var(--heading-font-weight);
 }
 
 .page-header {
@@ -110,8 +124,8 @@ button:focus {
 }
 
 .page-header__item {
-  flex: 0 1 200px;
-  width: 100px;
+  flex: 0 1 80px;
+  width: 60px;
   margin: 20px;
 }
 
@@ -131,6 +145,11 @@ button:focus {
 
 .navigation-list__item--active {
 	text-decoration: none;
+}
+
+.navigation-list__item:hover, .navigation-list__item:focus {
+  text-decoration: underline;
+  color: var(--primary-color);
 }
 
 .grid__item {
@@ -164,10 +183,126 @@ button:focus {
   text-align: center;
 }
 
-.table {
-	width: 500px;
-	margin: 0 auto;
+.work {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
+
+.contact {
+  background-color: white;
+    background-size: cover;
+    background-attachment: fixed;
+    height:700px;
+}
+
+/* This will center the form */
+.contact-wrapper {
+    width: 80%;
+    height: 50%;
+    margin: 5% auto 0 auto;
+}
+
+/* form animation starts */
+.form {
+    background: white;
+    text-align: center;
+    box-shadow: 0px 0px 20px 5px #AAA;
+    border-radius: 10px;
+    width: 45%;
+    height: 550px;
+    margin: 30px auto 0 auto;
+    padding: 10px 10px;
+}
+
+.name {
+    background-color: var(--primary-color);
+    border-bottom: 5px solid var(--secondary-color);
+    color: white;
+    width:300px;
+}
+
+  ::-webkit-input-placeholder{
+      color: white;
+      font-size: 15px;
+  }
+
+.name:hover{
+    background-color: var(--primary-color);
+    border-bottom: 5px solid var(--secondary-color);
+    height:30px;
+    width:400px;
+}
+
+.email {
+    background-color: var(--primary-color);
+    border-bottom: 5px solid var(--secondary-color);
+    height:50px;
+    width:300px;
+}
+
+.email:hover{
+    background-color: var(--primary-color);
+    border-bottom: 5px solid var(--secondary-color);
+    height:30px;
+    width:380px;
+}
+
+.phone {
+    background-color: var(--primary-color);
+    border-bottom: 5px solid var(--secondary-color);
+    height:50px;
+    width:300px;
+}
+
+.phone:hover{
+    background-color: var(--primary-color);
+    border-bottom: 5px solid var(--secondary-color);
+    height:30px;
+    width:380px;
+}
+
+.message {
+    background-color: var(--primary-color);
+    border-bottom: 5px solid var(--secondary-color);
+    overflow: hidden;
+    height: 100px;
+    width:300px;
+}
+
+.message:hover{
+    background-color: var(--primary-color);
+    border-bottom: 5px solid var(--secondary-color);
+    height: 100px;
+    width:370px;
+}
+
+.submit{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: none;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.submit:hover{
+    border-bottom: 5px solid var(--secondary-color);
+    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+}
+
+.entry{
+    display: block;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.5s ease 0s;
+    box-shadow: 0px 0px 25px 2px #AAA;
+}
+
+
+
+
 
 @media all and (max-width: 500px) {
   .grid {
@@ -192,44 +327,47 @@ button:focus {
   }
 }
 
+
+
 @keyframes color-change {
   0% {
-    fill: #edc655;
+    fill: #a4bde3;
   }
   50% {
-    fill: #fcffad;
+    fill: #dfe7f5;
   }
   100% {
-    fill: #f76414;
+    fill: #6a93d1;
   }
 }
 
-.sun {
+.plane{
   animation: 4s color-change infinite alternate linear;
 }
 
+
 @keyframes cloud-move {
   from {
-    transform: translate(0, 50px);
+    transform: translate(0, 100px);
   }
   to {
-    transform: translate(200px, 50px);
+    transform: translate(400px, 100px);
   }
 }
 
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
+.cloudfront-left {
+  animation: 5s cloud-move infinite alternate linear;
 }
 
 @keyframes cloud-move-reverse {
   from {
-    transform: translate(446px, 48px);
+    transform: translate(800px, 50px);
   }
   to {
-    transform: translate(100px, 48px);
+    transform: translate(0px, 50px);
   }
 }
 
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
+.cloudfront-right {
+  animation: 10s cloud-move-reverse infinite alternate linear;
 }
